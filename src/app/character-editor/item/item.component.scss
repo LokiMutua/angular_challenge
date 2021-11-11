@@ -1,0 +1,35 @@
+                    .slide-item {
+                        text-align: center;
+                        .item-image {
+                            opacity: 0.51;
+                            padding: 25px 25px;
+                            border-radius: 5%;
+                            z-index: -1000;
+                            img {
+                                border-radius: 5%;
+                            }
+                        }
+                        .active {
+                            border: 4px solid #C4B494;
+                        }
+                        .lower-right-image {
+                            background: url('../../../assets/itemSlider/gem_socket_square.png') 0% 0% no-repeat padding-box;
+                            img {
+                                width: 24px;
+                                height: 24px;
+                                float: right;
+                                margin-top: -60px;
+                                padding-right: 30px;
+                                opacity: 1;
+                            }
+                        }
+                        .rarity-image {
+                            margin-top: -40px;
+                            opacity: 1;
+                            z-index: 1000;
+                            img {
+                                height: 24px;
+                                width: 24px;
+                            }
+                        }
+                    }

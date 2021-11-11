@@ -1,17 +1,14 @@
 <!-- THIS COMPONENT NEEDS SOME WORK  -->
-
-<!-- This is an example on how to use the svg-icons -->
-<carousel [itemsPerSlide]="3"
-          [singleSlideOffset]="singleSlideOffset"
-          [noWrap]="!noWrap"
-          [interval]="0"
-          [activeSlide]="0"
-          [showIndicators]="false"
-          [startFromIndex]="0">
-  <slide *ngFor="let slide of slides; let index=index">
-    <app-item [item]="slide"></app-item>
-  </slide>
-</carousel>
-<div class="mySvgExample">
-    <svg-icon name="arrow_right" (click)="nextItem()"></svg-icon>
+<div class="carousel-wrapper">
+    <ul class="carousel-inner">
+        <li *ngFor="let slide of slides; let i = index" class="carousel-item">
+            <app-item [item]="slide" [currentSlide]="currentSlide" [index]="i"></app-item>
+        </li>
+    </ul>
+    <div class="next-arrow">
+        <p class="item-description">
+            <span class="description-bold ">Glittering Edge </span> | {{ slides[currentSlide].description }}
+            <svg-icon name="arrow_right" class="arrow" (click)="nextItem()"></svg-icon>
+        </p>
+    </div>
 </div>

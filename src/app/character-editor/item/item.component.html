@@ -1,0 +1,11 @@
+<div class="slide-item">
+    <div class="item-image" [ngClass]="{'active': currentSlide == index }">
+        <img [src]=" item.src">
+    </div>
+    <div class="lower-right-image">
+        <img src="../../../assets/itemSlider/gem_socket_square.png " class="item-lower-image" />
+    </div>
+    <div class="rarity-image">
+        <img [src]="item.rarity " class="item-lower-image" />
+    </div>
+</div>
